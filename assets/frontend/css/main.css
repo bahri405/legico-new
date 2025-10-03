@@ -1081,7 +1081,7 @@ section,
 
 @media (max-width: 640px) {
   .clients .client-logo img {
-    padding: 20px;
+    padding: 10px;
   }
 }
 
@@ -2665,16 +2665,22 @@ section,
 }
 
 .gold-gradient {
-  font-size: 50px;
-  font-weight: bold;
-  background: linear-gradient(to bottom, #ffffff 0%, #ffd700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+    font-size: inherit !important;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block;
+    line-height: 1;
 }
 
+
+
+
 .gold-gradient-blue {
+  font-size: inherit !important;
   font-size: 35px;
   /* font-weight: bold; */
   background: linear-gradient(to bottom, #08395a 0%, #ffc824 80%, #ffc824 100%);
