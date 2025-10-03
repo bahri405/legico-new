@@ -2672,8 +2672,8 @@ section,
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    display: inline-block;
-    line-height: 1;
+    display: inline;
+    line-height: inherit;
 }
 
 
