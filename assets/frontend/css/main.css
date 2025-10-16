@@ -1,3 +1,4 @@
+
 /* Manrope */
 @font-face {
   font-family: "Manrope";
@@ -161,8 +162,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  max-height: 60px;
+  /* margin-right: 8px; */
 }
 
 .header .logo h1 {
@@ -170,7 +171,7 @@ h6 {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
-  text-transform: uppercase;
+  text-transform: uppercase;  
 }
 
 .header .btn-getstarted,
@@ -190,6 +191,7 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -203,6 +205,10 @@ h6 {
 
   .header .navmenu {
     order: 3;
+  }
+
+  .header .logo img {
+    max-height: 45px;
   }
 }
 
@@ -465,11 +471,11 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 80px;
   margin-right: 6px;
 }
 
@@ -1002,6 +1008,33 @@ section,
   }
 }
 
+@media (max-width: 576px) {
+  .hero .carousel-container {
+    padding: 40px 20px; /* beri ruang supaya teks gak mepet tepi */
+  }
+
+  .hero .carousel-container h2 {
+    font-size: 22px;        /* kecilkan ukuran teks */
+    line-height: 1.4;       /* buat lebih nyaman dibaca */
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .hero .carousel-container p {
+    font-size: 14px;        /* ukuran pas untuk HP */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ffffff;         /* pastikan tetap terbaca di background gelap */
+  }
+
+  .hero .carousel-container .btn {
+    font-size: 13px;
+    padding: 6px 18px;
+    border-radius: 6px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1058,32 +1091,60 @@ section,
 .clients {
   padding: 20px 0;
 }
+.client-slider-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
 
-.clients .client-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+    .client-slider-track {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
+
+    .client-logo {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 140px;
+      max-width: 180px;
+    }
+
+    .client-logo img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .client-logo img {
+        max-width: 80px;
+      }
+      .client-slider-track {
+        animation-duration: 40s;
+        gap: 5px;
+      }
+    }
 
 .clients .client-logo img {
-  /* padding: 20px 10px; */
   max-width: 60%;
   transition: 0.3s;
-  /* opacity: 0.5;
-  filter: grayscale(100); */
 }
 
-.clients .client-logo img:hover {
-  filter: none;
-  opacity: 1;
-}
 
-@media (max-width: 640px) {
-  .clients .client-logo img {
-    padding: 10px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Services Section
@@ -1791,7 +1852,7 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
-.pricing .pricing-item {
+/* .pricing .pricing-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -1813,7 +1874,6 @@ section,
   font-size: 16px;
   font-weight: 600;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  /* background: color-mix(in srgb, var(--default-color), transparent 95%); */
 }
 
 .pricing .pricing-item h4 {
@@ -1835,7 +1895,6 @@ section,
 }
 
 .pricing .pricing-item ul {
-  /* padding: 15px 0; */
   list-style: none;
   text-align: left;
   line-height: 20px;
@@ -1883,51 +1942,104 @@ section,
 }
 
 .pricing .featured h3 {
-  /* background: var(--accent-color); */
-}
-
-/* 
-.pricing .icon {
-  margin: 30px auto 20px auto;
-  width: 70px;
-  height: 70px;
-  background: var(--accent-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  transform-style: preserve-3d;
-}
-
-.pricing .icon i {
-  color: var(--background-color);
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-  line-height: 0;
-}
-
-.pricing .icon::before {
-  position: absolute;
-  content: "";
-  height: 86px;
-  width: 86px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-
-.pricing .icon::after {
-  position: absolute;
-  content: "";
-  height: 102px;
-  width: 102px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-2px);
 } */
+
+.pricing .pricing-item {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f6fa 100%);
+  border-radius: 15px;
+  border: 1px solid #e4e4e4;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  overflow: hidden;
+  transition: all 0.3s ease; /* animasi hover */
+}
+
+/* Pola titik-titik di pojok kanan bawah */
+.pricing .pricing-item::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 180px;
+  height: 180px;
+  background-image: radial-gradient(rgba(8, 57, 90, 0.1) 2px, transparent 2px);
+  background-size: 16px 16px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Hover efek */
+.pricing .pricing-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul */
+.pricing .pricing-item h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #08395a;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 15px;
+}
+
+/* List item */
+.pricing .pricing-item .d-flex {
+  align-items: flex-start;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing .pricing-item p {
+  font-size: 14px;
+  margin: 0;
+  color: #08395a;
+  font-weight: 600;
+}
+
+/* Harga */
+.pricing .pricing-item .harga {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #08395a;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tombol CTA */
+.gold-cta-btn {
+  background: linear-gradient(90deg, #ffbf00 0%, #ffd95a 100%);
+  color: #08395a;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 10px 36px;
+  box-shadow: 0 4px 18px rgba(255, 200, 36, 0.18);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Efek hover tombol */
+.gold-cta-btn:hover {
+  background: linear-gradient(90deg, #ffd95a 0%, #ffbf00 100%);
+  color: #002a43;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 200, 36, 0.25);
+}
+
+.gold-cta-btn:hover {
+  background: linear-gradient(90deg, #ffd95a 0%, #ffbf00 100%);
+  color: #002a43;
+}
+
 
 .pricing .advanced {
   background: var(--accent-color);
@@ -1941,6 +2053,17 @@ section,
   font-size: 14px;
   padding: 1px 0 3px 0;
 }
+
+.jasa-lainnya-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+  }
+
+  .jasa-lainnya-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
 
 /*--------------------------------------------------------------
 # Blog Posts Section
@@ -2641,8 +2764,8 @@ section,
 
 .whyus .whyus-item .icon {
   position: absolute;
-  left: -20px;
-  top: calc(50% - 30px);
+  left: 20px;
+  top: calc(50% - 35px);
 }
 
 .whyus .whyus-item .icon i {
@@ -2653,7 +2776,7 @@ section,
 
 .whyus .whyus-item h3 {
   font-weight: 700;
-  margin: 10px 0 15px 0;
+  margin: 10px 0 15px 30px;
   font-size: 22px;
   transition: ease-in-out 0.3s;
 }
@@ -2661,23 +2784,21 @@ section,
 .whyus .whyus-item p {
   line-height: 24px;
   font-size: 14px;
+  margin-left: 30px;
   margin-bottom: 0;
 }
 
 .gold-gradient {
-    font-size: inherit !important;
-    font-weight: bold;
-    background: linear-gradient(to bottom, #ffffff 0%, #ffd700 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    display: inline;
-    line-height: inherit;
+  font-size: inherit !important;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ffffff 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: inline;
+  line-height: inherit;
 }
-
-
-
 
 .gold-gradient-blue {
   font-size: inherit !important;
@@ -2689,7 +2810,7 @@ section,
   background-clip: text;
   text-fill-color: transparent;
 }
-
+/* 
 .client-slider-wrapper {
   width: 100%;
   overflow: hidden;
@@ -2699,8 +2820,7 @@ section,
 .client-slider {
   display: flex;
   align-items: center;
-  gap: 64px;
-  /*Jarakantarlogo*/
+  gap: 10px;
   animation: client-slide 15s linear infinite;
   min-width: 200%;
   -webkit-animation: client-slide 15s linear infinite;
@@ -2713,7 +2833,7 @@ section,
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 .gold-cta-btn:hover,
 .gold-cta-btn:focus {
