@@ -50,7 +50,105 @@
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#about">Tentang Kami</a></li>
-                    <li><a href="#services">Layanan Kami</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a href="#layanan-pt">Legalitas Usaha</a></li>
+                            <li><a href="#layanan-perjanjian">Virtual Office</a></li>
+                            <li><a href="#layanan-haki">Service Office</a></li>
+                            <li><a href="#layanan-izin">Jasa Lainnya</a></li>
+                        </ul>
+                    </li>
+<!--                     
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span>Layanan Kami</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#layanan-pt">Legalitas Usaha</a></li>
+                        <li><a href="#layanan-perjanjian">Virtual Office</a></li>
+                        <li><a href="#layanan-haki">Service Office</a></li>
+                        <li><a href="#layanan-izin">Jasa Lainnya</a></li>
+                    </ul>
+                    </li> -->
+                    <style>
+                        .navmenu ul li.dropdown > ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 99;
+  border-radius: 8px;
+}
+
+.navmenu ul li.dropdown:hover > ul {
+  display: block;
+}
+
+.navmenu ul li.dropdown ul li {
+  white-space: nowrap;
+}
+
+.navmenu ul li.dropdown ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.navmenu ul li.dropdown ul li a:hover {
+  background: #08395a;
+  color: #fff;
+}
+
+/* Dropdown dasar */
+.navmenu ul li.dropdown {
+  position: relative;
+}
+
+.navmenu ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 99;
+}
+
+.navmenu ul li.dropdown.open > .dropdown-menu {
+  display: block;
+}
+
+.navmenu ul li .dropdown-menu li a {
+  display: block;
+  padding: 8px 20px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navmenu ul li .dropdown-menu li a:hover {
+  background: #08395a;
+  color: #fff;
+}
+
+/* Untuk mobile, biar dropdown-nya tampil di bawah menu */
+@media (max-width: 991.98px) {
+  .navmenu ul li .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+}
+
+
+                    </style>
                     <li><a href="#keunggulan">Keunggulan Kami</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
@@ -249,8 +347,8 @@
         <section id="keunggulan" class="whyus section" style="background-color: #08395a">
             <!-- Section Title -->
             <div class="container text-left section-title mb-5" data-aos="fade-up">
-                <h2 class="text-white">Mengapa</h2>
-                <p class="text-white">Keunggulan Kami</p>
+                <h2 class="text-white">Mengapa Melilih LEGICO</h2>
+                <p class="text-white">Solusi Tepat untuk kebutuhan Bisnis Anda</p>
             </div>
             <div class="container mb-5">
                 <div class="row gy-4">
@@ -262,7 +360,7 @@
                             <a href="" class="stretched-link">
                                 <h3>Mudah & Cepat</h3>
                             </a>
-                            <p>Proses legalitas tanpa ribet.</p>
+                            <p>Semua proses legalitas diurus cepat dan tanpa ribet, agar Anda bisa fokus ke bisnis.</p>
                         </div>
                     </div>
                     <!-- End whyus Item -->
@@ -275,7 +373,7 @@
                             <a href="" class="stretched-link">
                                 <h3>Profesional</h3>
                             </a>
-                            <p>Ditangani tim berpengalaman.</p>
+                            <p>Ditangani tim berpengalaman dengan standar layanan terbaik dibidang hukum dan perizinan.</p>
                         </div>
                     </div>
                     <!-- End whyus Item -->
@@ -288,7 +386,7 @@
                             <a href="" class="stretched-link">
                                 <h3>Fleksibel</h3>
                             </a>
-                            <p>Solusi sesuai skala usaha Anda.</p>
+                            <p>Layanan disesuaikan dengan kebutuhan dan skala usaha Anda dari UMKM hingga korporasi.</p>
                         </div>
                     </div>
                     <!-- End whyus Item -->
@@ -301,7 +399,7 @@
                             <a href="" class="stretched-link">
                                 <h3>Transparan</h3>
                             </a>
-                            <p>Biaya jelas, tanpa tersembunyi.</p>
+                            <p>Biaya dan proses  dijelaskan secara terbuka.</p>
                         </div>
                     </div>
                     <!-- End whyus Item -->
@@ -314,7 +412,7 @@
                             <a href="" class="stretched-link">
                                 <h3>Terpercaya</h3>
                             </a>
-                            <p>Sesuai regulasi resmi.</p>
+                            <p>Proses sesuai regulasi resmi, hasil legalitas terjamin dan dapat di verifikasi.</p>
                         </div>
                     </div>
                     <!-- End whyus Item -->
@@ -327,7 +425,7 @@
                             <a href="" class="stretched-link">
                                 <h3>Partner Strategis</h3>
                             </a>
-                            <p>Mendukung pertumbuhan usaha jangka panjang.</p>
+                            <p>Kami jadi mitra jangka panjang dalam mendukung pertumbuhan bisnis Anda.</p>
                         </div>
                     </div>
                     <!-- End whyus Item -->
@@ -341,7 +439,7 @@
         <section id="services" class="pricing section">
             <div class="container text-left section-title mb-5" data-aos="fade-up">
                 <h2>Layanan</h2>
-                <p>Solusi terbaik untuk Anda</p>
+                <p>Legalitas Usaha</p>
             </div>
 
             <div class="container mt-3">
@@ -799,6 +897,294 @@
             </div>
         </section>
 
+        <!-- lokasi virtual office -->
+        <section id="virtual-office" class="virtual-section section light-background py-5">
+            <div class="container text-start section-title mb-5" data-aos="fade-up">
+                <h2>LOKASI VIRTUAL OFFICE KAMI</h2>
+                <p class="mb-0">Seluruh Lokasi Alamat Virtual Office Kami Terletak di Premium Building dan di Pusat Kota</p>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="virtual-card p-0 rounded-4 shadow-sm h-100 overflow-hidden">
+                            <!-- Image on top -->
+                            <div class="virtual-card-media">
+                                <img src="assets/frontend/img/office/location-jaya-building-MH-Thamrin.jpg" class="img-fluid" alt="Jaya Building">
+                            </div>
+                            <!-- Body below image -->
+                            <div class="virtual-card-body p-4">
+                                <h5 class="mt-0">Jaya Building Sarinah - Jakarta Pusat</h5>
+                                <p class="">Virtual office kami di Jakarta Pusat berlokasi di Gedung Jaya Building Sarinah, Jakarta Pusat, DKI Jakarta. Adapun virtual office Jakarta Pusat kami ini dilengkapi fitur sebagai berikut:</p>
+                                <div class="price mb-3">Rp 166K <span style="font-size: 1.2rem; font-weight: 500;">/bulan</span></div>
+                                <a href="https://wa.me/6285161843005" class="btn btn-vo mb-3 w-100">Pesan ini</a>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Alamat Bisnis Komersil</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Profesional Resepsionis</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penggunaan fasilitas ruangan</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penanganan Dokumen</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Share phone number</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Wi-Fi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="virtual-card p-0 rounded-4 shadow-sm h-100 overflow-hidden">
+                            <div class="virtual-card-media">
+                                <img src="assets/frontend/img/office/grand-slip-tower-.jpg" class="img-fluid" alt="Grand Slipi Tower">
+                            </div>
+                            <div class="virtual-card-body p-4">
+                                <h5 class="mt-0">Grand Slipi Tower - Jakarta Barat</h5>
+                                <p >Virtual office kami di Jakarta Barat berlokasi di gedung Grand Slipi Tower Lantai 5 Unit F, Jakarta Barat, DKI Jakarta, Indonesia. Adapun virtual office Jakarta Barat kami ini dilengkapi fitur sebagai berikut:</p>
+                                <div class="price mb-3">Rp 208K <span style="font-size: 1.2rem; font-weight: 500;">/bulan</span></div>
+                                <a href="https://wa.me/6285161843005" class="btn btn-vo mb-3 w-100">Pesan ini</a>
+                                <ul class="list-unstyled small mb-0">
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Alamat Bisnis Komersil</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Profesional Resepsionis</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penggunaan fasilitas ruangan</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penanganan Dokumen</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Share phone number</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Wi-Fi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="virtual-card p-0 rounded-4 shadow-sm h-100 overflow-hidden">
+                            <div class="virtual-card-media">
+                                <img src="assets/frontend/img/office/IMG_5266.jpg" class="img-fluid" alt="Graha Mampang">
+                            </div>
+                            <div class="virtual-card-body p-4">
+                                <h5 class="mt-0">Graha Mampang - Jakarta Selatan</h5>
+                                <p>Virtual office kami di Jakarta Selatan berlokasi di gedung Graha Mampang Lantai 1 Suite 101 Jakarta Selatan, DKI Jakarta, Indonesia. Adapun virtual office Jakarta Selatan kami ini dilengkapi fitur sebagai berikut:</p>
+                                <div class="price mb-3">Rp 200K <span style="font-size: 1.2rem; font-weight: 500;">/bulan</span></div>
+                                <a href="https://wa.me/6285161843005" class="btn btn-vo mb-3 w-100">Pesan ini</a>
+                                <ul class="list-unstyled small mb-0">
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Alamat Bisnis Komersil</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Profesional Resepsionis</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penggunaan fasilitas ruangan</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penanganan Dokumen</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Share phone number</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Wi-Fi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="virtual-card p-0 rounded-4 shadow-sm h-100 overflow-hidden">
+                            <div class="virtual-card-media">
+                                <img src="assets/frontend/img/office/mten.jpeg" class="img-fluid" alt="M-TEN Building">
+                            </div>
+                            <div class="virtual-card-body p-4">
+                                <h5 class="mt-0">M-TEN Building - Jakarta Selatan</h5>
+                                <p>Virtual office kami di Jakarta Selatan berlokasi di gedung Menara Tendean Lantai 17 Unit C, Jakarta Selatan, DKI Jakarta, Indonesia. Adapun virtual office Jakarta Selatan kami ini dilengkapi fitur sebagai berikut:</p>
+                                <div class="price mb-3">Rp 200K <span style="font-size: 1.2rem; font-weight: 500;">/bulan</span></div>
+                                <a href="https://wa.me/6285161843005" class="btn btn-vo mb-3 w-100">Pesan ini</a>
+                                <ul class="list-unstyled small mb-0">
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Alamat Bisnis Komersil</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Profesional Resepsionis</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penggunaan fasilitas ruangan</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Penanganan Dokumen</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Share phone number</li>
+                                    <li><i class="bi bi-check2-circle" style="color: #08395a"></i> Wi-Fi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery section">
+            <div class="container text-left section-title mb-5" data-aos="fade-up">
+                <h2>Galeri</h2>
+                <p>Kegiatan Kami</p>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <!-- Swiper -->
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-6.jpg" class="img-fluid rounded-3" alt="Galeri 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-8.jpg" class="img-fluid rounded-3" alt="Galeri 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-9.jpg" class="img-fluid rounded-3" alt="Galeri 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-6.jpg" class="img-fluid rounded-3" alt="Galeri 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-8.jpg" class="img-fluid rounded-3" alt="Galeri 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-8.jpg" class="img-fluid rounded-3" alt="Galeri 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-9.jpg" class="img-fluid rounded-3" alt="Galeri 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-6.jpg" class="img-fluid rounded-3" alt="Galeri 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/frontend/img/galery/pilargroup-clients-8.jpg" class="img-fluid rounded-3" alt="Galeri 2">
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+            <!-- Pagination placed below the image container so it's clearly visible -->
+            <div class="container text-center mt-3">
+                <div class="gallery-pagination swiper-pagination d-inline-block"></div>
+            </div>
+        </section>
+
+        <!-- testimoni -->
+        <section id="testimoni" class="testimoni section">
+            <div class="container text-left section-title mb-3" data-aos="fade-up">
+                <h2>Google Reviews</h2>
+                <p class="lead">5.0 <span class="rating-stars">★★★★★</span></p>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <!-- Swiper: show 4 cards per view on desktop like the screenshot -->
+                <div class="swiper testimoni-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimoni-card p-4 rounded-4 shadow-sm text-center">
+                                <div class="stars text-center mb-2">★★★★★</div>
+                                <p class="small">Sangattt membantu, ramah dan cepat</p>
+                                <div class="mt-3 d-flex flex-column align-items-center">
+                                    <!-- <img src="assets/frontend/img/clients/avatar1.jpg" alt="Piyan" class="rounded-circle avatar-sm mb-2"> -->
+                                    <div class="avatar-sm bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mb-2">P</div>
+                                    <strong>Piyan Pitriyani</strong>
+                                    <div class="text-muted small">1 month ago</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimoni-card p-4 rounded-4 shadow-sm text-center">
+                                <div class="stars text-center mb-2">★★★★★</div>
+                                <p class="small">Pelayanan bagus dan cepat, staffnya juga ramah dan sopan... Sukses terus PILAR...</p>
+                                <div class="mt-3 d-flex flex-column align-items-center">
+                                    <div class="avatar-sm bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center mb-2">M</div>
+                                    <strong>Megatech Karya Utama</strong>
+                                    <div class="text-muted small">1 month ago</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="testimoni-card p-4 rounded-4 shadow-sm text-center">
+                                <div class="stars text-center mb-2">★★★★★</div>
+                                <p class="small">Bagus dan puas banget dengan cara kerja nya cepet dan kerjasama nya bagus.</p>
+                                <div class="mt-3 d-flex flex-column align-items-center">
+                                    <div class="avatar-sm bg-info text-white rounded-circle d-flex align-items-center justify-content-center mb-2">d</div>
+                                    <strong>duakreatifindonesia</strong>
+                                    <div class="text-muted small">1 month ago</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="testimoni-card p-4 rounded-4 shadow-sm text-center">
+                                <div class="stars text-center mb-2">★★★★★</div>
+                                <p class="small">terimakasih PILAR, kami terbantu</p>
+                                <div class="mt-3 d-flex flex-column align-items-center">
+                                    <!-- <img src="assets/frontend/img/clients/avatar2.jpg" alt="Prass" class="rounded-circle avatar-sm mb-2"> -->
+                                    <div class="avatar-sm bg-success text-white rounded-circle d-flex align-items-center justify-content-center mb-2">D</div>
+                                    <strong>D “Prass” Prasetyo</strong>
+                                    <div class="text-muted small">1 month ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- artikel -->
+        <section id="artikel" class="py-5 bg-light">
+            <div class="container">
+                <div class="container text-left section-title mb-5" data-aos="fade-up">
+                <h2>Artikel</h2>
+                <p>Artikel</p>
+            </div>
+            
+
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4 h-100">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=60" 
+                    class="card-img-top rounded-top-4" alt="Artikel 1">
+                <div class="card-body">
+                    <small class="text-muted d-block mb-1">
+                    Jasa Pengurusan Haki Cepat • May 24, 2025
+                    </small>
+                    <h5 class="card-title fw-semibold">
+                    Jasa Pengurusan HAKI Cepat dan Mudah
+                    </h5>
+                </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4 h-100">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=60" 
+                    class="card-img-top rounded-top-4" alt="Artikel 2">
+                <div class="card-body">
+                    <small class="text-muted d-block mb-1">
+                    Jasa Pembuatan Perjanjian • May 24, 2025
+                    </small>
+                    <h5 class="card-title fw-semibold">
+                    Peran Jasa Pembuatan Perjanjian Kerjasama Bisnis
+                    </h5>
+                </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4 h-100">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=60" 
+                    class="card-img-top rounded-top-4" alt="Artikel 3">
+                <div class="card-body">
+                    <small class="text-muted d-block mb-1">
+                    Jasa Pembuatan Perjanjian • May 24, 2025
+                    </small>
+                    <h5 class="card-title fw-semibold">
+                    Mengapa Jasa Pembuatan Perjanjian itu Penting
+                    </h5>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+
+        
         <!-- Contact Section -->
         <section id="contact" class="contact section">
             <!-- Section Title -->
@@ -874,7 +1260,18 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 footer-links">
+                <div class="col-lg-6 col-md-6 ">
+                    <div class="footer-logos d-flex flex-wrap align-items-center  gap-3">
+                        <div class="footer-logo-item" style="background-color: #ffffff; padding: 10px;"><img src="assets/frontend/img/footer/pse.webp" alt="PSE" class="footer-logo-img"></div>
+                        <div class="footer-logo-item"><img src="assets/frontend/img/footer/mandiri.png" alt="Mandiri" class="footer-logo-img"></div>
+                        <div class="footer-logo-item"><img src="assets/frontend/img/footer/bca.png" alt="BCA" class="footer-logo-img"></div>
+                        <div class="footer-logo-item"><img src="assets/frontend/img/footer/uob.png" alt="UOB" class="footer-logo-img"></div>
+                        
+                    </div>
+                    <a href="https://pse.komdigi.go.id/tdpse-detail/7016" target="_blank" class="btn btn-vo my-3">Verifikasi PSE</a>
+                </div>
+
+                <!-- <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Index Pages</h4>
                     <ul>
                         <li><a href="#hero">Home</a></li>
@@ -894,7 +1291,7 @@
                         <li><a href="#services">Pendirian CV lengkap + VO 1 Tahun</a></li>
                         <li><a href="#services">Pendirian Firma PT Perorangan</a></li>
                     </ul>
-                </div>
+                </div> -->
 
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Media Contacts</h4>
@@ -936,6 +1333,70 @@
     <script src="assets/frontend/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/frontend/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/frontend/js/main.js"></script>
+        <script>
+        // Initialize gallery Swiper
+        (function () {
+            if (window.Swiper) {
+                new Swiper('.gallery-swiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.gallery-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        0: { slidesPerView: 1 },
+                        576: { slidesPerView: 2 },
+                        992: { slidesPerView: 3 }
+                    }
+                });
+
+                // Initialize testimonial Swiper (autoplay, 3-per-row on large screens)
+                new Swiper('.testimoni-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.testimoni-swiper .swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        0: { slidesPerView: 1 },
+                        576: { slidesPerView: 2 },
+                        992: { slidesPerView: 3 }
+                    }
+                });
+            }
+        })();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownToggles = document.querySelectorAll(".navmenu .dropdown-toggle");
+
+            dropdownToggles.forEach((toggle) => {
+            toggle.addEventListener("click", function (e) {
+                e.preventDefault(); // biar gak href langsung
+                const parentLi = this.parentElement;
+
+                // Tutup dropdown lain kalau dibuka
+                document.querySelectorAll(".navmenu .dropdown.open").forEach((item) => {
+                if (item !== parentLi) item.classList.remove("open");
+                });
+
+                // Toggle buka/tutup dropdown
+                parentLi.classList.toggle("open");
+            });
+            });
+        });
+        </script>
 </body>
 
 </html>

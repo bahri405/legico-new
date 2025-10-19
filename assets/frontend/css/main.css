@@ -1,4 +1,3 @@
-
 /* Manrope */
 @font-face {
   font-family: "Manrope";
@@ -171,7 +170,7 @@ h6 {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 .header .btn-getstarted,
@@ -190,7 +189,6 @@ h6 {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
-
 
 @media (max-width: 1200px) {
   .header .logo {
@@ -283,7 +281,11 @@ h6 {
     border-radius: 4px;
     z-index: 99;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
 
   .navmenu .dropdown ul li {
     min-width: 200px;
@@ -1014,17 +1016,17 @@ section,
   }
 
   .hero .carousel-container h2 {
-    font-size: 22px;        /* kecilkan ukuran teks */
-    line-height: 1.4;       /* buat lebih nyaman dibaca */
+    font-size: 22px; /* kecilkan ukuran teks */
+    line-height: 1.4; /* buat lebih nyaman dibaca */
     font-weight: 700;
     margin-bottom: 15px;
   }
 
   .hero .carousel-container p {
-    font-size: 14px;        /* ukuran pas untuk HP */
+    font-size: 14px; /* ukuran pas untuk HP */
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #ffffff;         /* pastikan tetap terbaca di background gelap */
+    color: #ffffff; /* pastikan tetap terbaca di background gelap */
   }
 
   .hero .carousel-container .btn {
@@ -1033,7 +1035,6 @@ section,
     border-radius: 6px;
   }
 }
-
 
 /*--------------------------------------------------------------
 # About Section
@@ -1092,59 +1093,57 @@ section,
   padding: 20px 0;
 }
 .client-slider-wrapper {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 
-    .client-slider-track {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      width: max-content;
-      animation: scroll 30s linear infinite;
-    }
+.client-slider-track {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
 
-    .client-logo {
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 140px;
-      max-width: 180px;
-    }
+.client-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  max-width: 180px;
+}
 
-    .client-logo img:hover {
-      filter: grayscale(0%);
-      opacity: 1;
-      transform: scale(1.05);
-    }
+.client-logo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
 
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-    @media (max-width: 767.98px) {
-      .client-logo img {
-        max-width: 80px;
-      }
-      .client-slider-track {
-        animation-duration: 40s;
-        gap: 5px;
-      }
-    }
+@media (max-width: 767.98px) {
+  .client-logo img {
+    max-width: 80px;
+  }
+  .client-slider-track {
+    animation-duration: 40s;
+    gap: 5px;
+  }
+}
 
 .clients .client-logo img {
   max-width: 60%;
   transition: 0.3s;
 }
-
-
 
 /*--------------------------------------------------------------
 # Services Section
@@ -1783,7 +1782,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
-.portfolio-details .portfolio-details-slider img {
+/* .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
 
@@ -1847,7 +1846,7 @@ section,
 .portfolio-details .portfolio-description p {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
+} */
 
 /*--------------------------------------------------------------
 # Pricing Section
@@ -2040,7 +2039,6 @@ section,
   color: #002a43;
 }
 
-
 .pricing .advanced {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -2055,15 +2053,15 @@ section,
 }
 
 .jasa-lainnya-card {
-    background: #ffffff;
-    border: 1px solid #e9ecef;
-    transition: all 0.3s ease;
-  }
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
 
-  .jasa-lainnya-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  }
+.jasa-lainnya-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
 
 /*--------------------------------------------------------------
 # Blog Posts Section
@@ -2865,3 +2863,235 @@ section,
   transform: translateY(-2px) scale(1.04);
   text-decoration: none;
 }
+
+/* Gallery (Swiper) pagination & navigation overrides - make visible and gold themed */
+.gallery-swiper {
+  position: relative; /* allow pagination placed outside to align with container */
+}
+
+/* When pagination is placed outside the swiper (below the container) the vendor CSS sets .swiper-pagination to absolute.
+   Ensure our external pagination container displays normally and centers its bullets */
+.gallery-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  top: auto !important;
+  width: auto !important;
+  display: inline-block !important;
+  padding: 6px 8px;
+}
+
+.gallery-pagination .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+  opacity: 1 !important;
+  margin: 0 6px !important;
+  border-radius: 50% !important;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.gallery-pagination .swiper-pagination-bullet-active {
+  background: #ffc824 !important; /* gold active dot */
+  transform: scale(1.15) !important;
+}
+
+/* Style navigation arrows and increase hit area for mobile */
+.gallery-swiper .swiper-button-next,
+.gallery-swiper .swiper-button-prev {
+  color: #ffc824; /* arrow color */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 200, 36, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(8, 57, 90, 0.06);
+}
+
+.gallery-swiper .swiper-button-next:after,
+.gallery-swiper .swiper-button-prev:after {
+  font-size: 2.5rem;
+  color: #ffc824;
+}
+
+@media (max-width: 575.98px) {
+  .gallery-swiper .swiper-button-next,
+  .gallery-swiper .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+  }
+  .gallery-swiper .swiper-button-next:after,
+  .gallery-swiper .swiper-button-prev:after {
+    font-size: 1.5rem;
+    color: #ffc824;
+  }
+}
+
+/* Testimoni cards styling */
+.testimoni-card {
+  background: #fbfbfb;
+  border: 1px solid #eee;
+  padding: 20px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimoni-card .stars {
+  color: #ffc824;
+  font-size: 1.05rem;
+}
+
+.avatar-sm {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+/* Make swiper slides size-friendly */
+.testimoni-swiper .swiper-slide {
+  width: auto;
+}
+
+/* Virtual Office section styles */
+
+/* Virtual Office section uses the gradient image as background with a soft overlay for contrast */
+#virtual-office.virtual-section {
+  background-image: url("../img/office/bg-vo-office.png");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding: 80px 0;
+  color: #08395a;
+}
+
+/* overlay to ensure cards/readable text on top of busy background */
+#virtual-office.virtual-section:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(255, 255, 255, 0.78) 100%
+  );
+  z-index: 0;
+}
+
+.virtual-section .container,
+#virtual-office .container {
+  position: relative;
+  z-index: 2; /* place content above overlay */
+}
+
+/* New vertical layout: image full width on top, then body */
+.virtual-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.virtual-card .virtual-card-media img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.virtual-card h5 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.virtual-card .price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #08395a;
+}
+
+.btn-vo {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffc824 0%, #ffd95a 100%);
+  color: #08395a;
+  border-radius: 5px;
+  padding: 10px 18px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(255, 75, 0, 0.14);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.btn-vo:hover {
+  background: linear-gradient(90deg, #08395a 0%, #1e5b8c 100%);
+  color: #fff !important;
+  box-shadow: 0 6px 24px rgba(8, 57, 90, 0.18);
+  transform: translateY(-2px) scale(1.04);
+  text-decoration: none;
+}
+
+.virtual-card ul li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .virtual-card .virtual-card-media img {
+    height: 180px;
+  }
+  #virtual-office.virtual-section {
+    padding: 40px 0;
+  }
+}
+
+/* Footer logos responsive styling */
+.footer-logos {
+  gap: 12px;
+}
+.footer-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo-img {
+  max-height: 48px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+  filter: grayscale(0%);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.footer-logo-img:hover {
+  transform: translateY(-4px) scale(1.02);
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  
+  .footer-logo-img {
+    max-height: 34px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-logo-img {
+    max-height: 30px;
+  }
+  .footer-logos {
+    gap: 8px;
+  }
+}
+
+/* artickel */
+#artikel .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
