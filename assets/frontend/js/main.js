@@ -190,3 +190,13 @@
   window.addEventListener("load", initSwiper);
 
 })();
+
+// swipper layanan
+var swiper = new Swiper(".layananSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    speed: 800,
+  });
