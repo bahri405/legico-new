@@ -3100,6 +3100,9 @@ section,
 #layanan-virtual-office {
   background-color: #08395a;
 }
+#layanan-service-office {
+  background-color: #08395a;
+}
 
 .service-text {
   margin-top: -20px;
@@ -3153,9 +3156,19 @@ section,
   object-fit: cover;
   border-radius: 0;
 }
+/* gambar */
+#layanan-service-office img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0;
+}
 
 @media (max-width: 576px) {
   #layanan-virtual-office img {
+    height: 250px;
+  }
+  #layanan-service-office img {
     height: 250px;
   }
 

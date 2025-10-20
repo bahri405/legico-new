@@ -49,96 +49,17 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
-                    <!-- <li><a href="#about">Tentang Kami</a></li> -->
-                    
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Layanan Kami</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#layanan-pt">Legalitas Usaha</a></li>
-                        <li><a href="#layanan-perjanjian">Virtual Office</a></li>
-                        <li><a href="#layanan-haki">Service Office</a></li>
-                        <li><a href="#layanan-izin">Jasa Lainnya</a></li>
-                    </ul>
-                    </li>
-                    <style>
-                        .navmenu ul li.dropdown > ul {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: #fff;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  z-index: 99;
-  border-radius: 8px;
-}
-
-.navmenu ul li.dropdown:hover > ul {
-  display: block;
-}
-
-.navmenu ul li.dropdown ul li {
-  white-space: nowrap;
-}
-
-.navmenu ul li.dropdown ul li a {
-  display: block;
-  padding: 8px 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.navmenu ul li.dropdown ul li a:hover {
-  background: #08395a;
-  color: #fff;
-}
-
-/* Dropdown dasar */
-.navmenu ul li.dropdown {
-  position: relative;
-}
-
-.navmenu ul li .dropdown-menu {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: #fff;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 10px 0;
-  z-index: 99;
-}
-
-.navmenu ul li.dropdown.open > .dropdown-menu {
-  display: block;
-}
-
-.navmenu ul li .dropdown-menu li a {
-  display: block;
-  padding: 8px 20px;
-  color: #333;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.navmenu ul li .dropdown-menu li a:hover {
-  background: #08395a;
-  color: #fff;
-}
-
-/* Untuk mobile, biar dropdown-nya tampil di bawah menu */
-@media (max-width: 991.98px) {
-  .navmenu ul li .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    padding-left: 20px;
-  }
-}
-
-
-                    </style>
+                    <li><a href="#about">Tentang Kami</a></li>
                     <li><a href="#keunggulan">Keunggulan Kami</a></li>
+                    <li class="dropdown"><a href="#"><span>Layanan Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#services">Legalitas Usaha</a></li>
+                            <li><a href="#layanan-virtual-office">Virtual Office</a></li>
+                            <li><a href="#layanan-service-office">Service Office</a></li>
+                            <li><a href="#layanan-jasa-lainnya">Jasa Lainnya</a></li>
+                        </ul>
+                    </li>
+                    
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -798,9 +719,9 @@
                         </div>
                     </div>
                     
-
-                    <!-- layanan jasa -->
-                    <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                    <section id="layanan-jasa-lainnya">
+                        <!-- layanan jasa -->
+                    <div class="col-12" data-aos="fade-up" data-aos-delay="200" >
                         <div class="pricing-item jasa-lainnya-card h-100 shadow-sm p-4 rounded-4">
                             <p class="text-center mb-4" style="color: #08395a; font-weight: 600; font-size: 1.75rem;">
                             JASA LAINNYA
@@ -839,6 +760,8 @@
                             </div>
                         </div>
                         </div>
+                    </section>
+                    
                 
                 </div>
             </div>
@@ -854,61 +777,124 @@
 
             <div class="container">
                 <div class="row align-items-center g-4">
-                <div class="col-12">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative">
-                    <!-- Baris utama dengan background lembut -->
-                    <div class="row g-0 position-relative layanan-bg">
-                        <div class="row-overlay"></div>
-                        <div class="decor-dots"></div>
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                        <!-- Baris utama dengan background lembut -->
+                        <div class="row g-0 position-relative layanan-bg">
+                            <div class="row-overlay"></div>
+                            <div class="decor-dots"></div>
 
-                        <!-- Kolom gambar (swiper) -->
-                        <div class="col-lg-6">
-                        <div class="swiper layananSwiper">
-                            <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=60" class="img-fluid w-100" alt="Gedung 1">
+                            <!-- Kolom gambar (swiper) -->
+                            <div class="col-lg-6">
+                            <div class="swiper layananVirtualSwiper">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1545256633-9d719bec17c6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" class="img-fluid w-100" alt="Gedung 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1600531529272-023c4b821f14?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687" class="img-fluid w-100" alt="Gedung 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1583009640887-eafd1a994d30?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764" class="img-fluid w-100" alt="Gedung 3">
+                                </div>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=60" class="img-fluid w-100" alt="Gedung 2">
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=60" class="img-fluid w-100" alt="Gedung 3">
-                            </div>
-                            </div>
-                        </div>
-                        </div>
 
-                        <!-- Kolom teks -->
-                        <div class="col-lg-6 p-4 p-md-5 position-relative">
-                        <div class="service-text">
-                            <h3 class="fw-bold mb-3">SEWA ALAMAT KANTOR</h3>
-                            <p class="mb-4">
-                            Tersedia di seluruh Jakarta, layanan kami memudahkan Anda memiliki alamat kantor prestisius tanpa harus menyewa ruang fisik. 
-                            Dengan layanan dokumen, resepsionis, dan ruang meeting modern, bisnis Anda tampak lebih profesional dan terpercaya.
-                            </p>
-                        </div>
+                            <!-- Kolom teks -->
+                            <div class="col-lg-6 p-4 p-md-5 position-relative">
+                            <div class="service-text">
+                                <h3 class="fw-bold mb-3">SEWA ALAMAT KANTOR</h3>
+                                <p class="mb-4">
+                                Tersedia di seluruh Jakarta, layanan kami memudahkan Anda memiliki alamat kantor prestisius tanpa harus menyewa ruang fisik. 
+                                Dengan layanan dokumen, resepsionis, dan ruang meeting modern, bisnis Anda tampak lebih profesional dan terpercaya.
+                                </p>
+                            </div>
 
-                        <ul class="list-unstyled mb-5 px-3">
-                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Alamat strategis</li>
-                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Penanganan dokumen</li>
-                            <li><i class="bi bi-check2-circle text-success me-2"></i>Meeting room</li>
-                        </ul>
+                            <ul class="list-unstyled mb-5 px-3">
+                                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Alamat strategis</li>
+                                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Penanganan dokumen</li>
+                                <li><i class="bi bi-check2-circle text-success me-2"></i>Meeting room</li>
+                            </ul>
 
-                        <div class="text-center mt-5">
-                            <a href="https://wa.me/6285161843005" target="_blank" class="btn gold-cta-btn">
-                            Start from 200rb/bulan <br>
-                            <span class="text-muted" style="font-size: 12px;">lihat lebih lanjut</span>
-                            </a>
-                        </div>
-                        </div>
-                    </div> <!-- end row -->
-                    </div> <!-- end card -->
-                </div>
+                            <div class="text-center mt-5">
+                                <a href="https://wa.me/6285161843005" target="_blank" class="btn gold-cta-btn">
+                                Start from 200rb/bulan <br>
+                                <span class="text-muted" style="font-size: 12px;">lihat lebih lanjut</span>
+                                </a>
+                            </div>
+                            </div>
+                        </div> <!-- end row -->
+                        </div> <!-- end card -->
+                    </div>
+                    
                 </div>
             </div>
         </section>
 
+        <section id="layanan-service-office" class="py-5">
+            <div class="container text-left  section-title mb-5" data-aos="fade-up">
+                <h2 class="text-white">Layanan</h2>
+                <p class="text-white">Service Office</p>
+            </div>
 
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                        <!-- Baris utama dengan background lembut -->
+                        <div class="row g-0 position-relative layanan-bg">
+                            <div class="row-overlay"></div>
+                            <div class="decor-dots"></div>
+
+                            <!-- Kolom gambar (swiper) -->
+                            <div class="col-lg-6">
+                            <div class="swiper layananServiceSwiper">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1671722294182-ed01cbe66bd1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cnVhbmdhbiUyMGthbnRvcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" class="img-fluid w-100" alt="Gedung 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://media.istockphoto.com/id/1753982535/id/foto/lingkungan-kerja-modern-yang-luas.jpg?s=1024x1024&w=is&k=20&c=_xWKVrkFMB027-KRlqT27ZXj2L7U8_PeXfjSFVJUXBA=" class="img-fluid w-100" alt="Gedung 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://media.istockphoto.com/id/1562425976/photo/penthouse-office-guest-area-3d-visualization.webp?a=1&b=1&s=612x612&w=0&k=20&c=3gZyVC-BtjuBOATZp221ubPQAtWDJZGgU82g6KpD4js=" class="img-fluid w-100" alt="Gedung 3">
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Kolom teks -->
+                            <div class="col-lg-6 p-4 p-md-5 position-relative">
+                            <div class="service-text">
+                                <h3 class="fw-bold mb-3">SEWA RUANGAN KANTOR</h3>
+                                <p class="mb-4">
+                                Ruangan kantor terjangkau dengan fasilitas lengkap. Tersedian ruang kerja nyaman,bersih, dan siap pakai lengkap dengan internet cepat dan ruang meeting profesional.
+                                </p>
+                            </div>
+
+                            <ul class="list-unstyled mb-5 px-3">
+                                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Bare Condition </li>
+                                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Semi-furnished / Semi-fittet</li>
+                                <li><i class="bi bi-check2-circle text-success me-2"></i>Fully-fitted / Ready to Use</li>
+                            </ul>
+
+                            <div class="text-center mt-5">
+                                <a href="https://wa.me/6285161843005" target="_blank" class="btn gold-cta-btn">
+                                Start from 200rb/bulan <br>
+                                <span class="text-muted" style="font-size: 12px;">lihat lebih lanjut</span>
+                                </a>
+                            </div>
+                            </div>
+                        </div> <!-- end row -->
+                        </div> <!-- end card -->
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+                    
 
         <!-- lokasi virtual office -->
         <section id="virtual-office" class="virtual-section section light-background py-5">
@@ -1391,24 +1377,7 @@
             }
         })();
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdownToggles = document.querySelectorAll(".navmenu .dropdown-toggle");
-
-            dropdownToggles.forEach((toggle) => {
-            toggle.addEventListener("click", function (e) {
-                e.preventDefault(); // biar gak href langsung
-                const parentLi = this.parentElement;
-
-                // Tutup dropdown lain kalau dibuka
-                document.querySelectorAll(".navmenu .dropdown.open").forEach((item) => {
-                if (item !== parentLi) item.classList.remove("open");
-                });
-
-                // Toggle buka/tutup dropdown
-                parentLi.classList.toggle("open");
-            });
-            });
-        });
+        
         </script>
 </body>
 

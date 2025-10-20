@@ -192,11 +192,58 @@
 })();
 
 // swipper layanan
-var swiper = new Swiper(".layananSwiper", {
+var swiper = new Swiper(".layananVirtualSwiper", {
     loop: true,
     autoplay: {
-      delay: 2500,
+      delay: 3000,
       disableOnInteraction: false,
     },
     speed: 800,
   });
+
+// swipper layanan
+var swiper = new Swiper(".layananServiceSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    speed: 700,
+  });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("#navmenu a");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // hapus semua active
+          navLinks.forEach(link => link.classList.remove("active"));
+
+          const id = entry.target.getAttribute("id");
+          const activeLink = document.querySelector(`#navmenu a[href="#${id}"]`);
+
+          if (activeLink) {
+            activeLink.classList.add("active");
+
+            // kalau link ada di dalam dropdown, aktifkan juga parent-nya
+            const parentDropdown = activeLink.closest(".dropdown");
+            if (parentDropdown) {
+              const parentLink = parentDropdown.querySelector("a:first-child");
+              if (parentLink) parentLink.classList.add("active");
+            }
+          }
+        }
+      });
+    },
+    {
+      rootMargin: "-40% 0px -50% 0px",
+      threshold: 0
+    }
+  );
+
+  sections.forEach(section => observer.observe(section));
+});
