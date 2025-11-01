@@ -2349,6 +2349,7 @@ section,
   padding-left: 5px;
 }
 
+
 /*--------------------------------------------------------------
 # Blog Comments Section
 --------------------------------------------------------------*/
@@ -3182,4 +3183,19 @@ section,
   .service-text {
       margin-top: 5px;
     }
+}
+
+/* keunggulan */
+.keunggulan-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+  .keunggulan-text {
+    font-size: 1rem;
+  }
+  .keunggulan-ico {
+    font-size: 1.5rem !important;
+  }
 }
